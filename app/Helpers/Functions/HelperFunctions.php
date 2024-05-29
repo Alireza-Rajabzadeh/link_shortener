@@ -4,7 +4,7 @@
 
 function apiResponse($status = true, $response = [], $message = [], $status_code = 200)
 {
-    
+
     if (empty($message)) {
         switch ($status) {
             case true:
@@ -18,7 +18,7 @@ function apiResponse($status = true, $response = [], $message = [], $status_code
                 break;
         }
     }
-    
+
     $result = [
         "status" => $status,
         "status_code" => $status_code,

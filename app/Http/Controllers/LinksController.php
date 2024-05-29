@@ -19,6 +19,8 @@ class LinksController extends Controller
     {
         $this->links_service = $links_service;
     }
+
+
     /**
      * Display a listing of the resource.
      */

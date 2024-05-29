@@ -140,12 +140,10 @@ class LinksService
         $where_clause = array_filter(arrayOnly($index_data, $where_clause_columns));
         $date_clause = array_filter(arrayOnly($index_data, $date_clause_columns));
         $like_clause = array_filter(arrayOnly($index_data, $like_clause_columns));
-        // $group_by_clause_columns = array_filter(arrayOnly($index_data, $group_by_clause_columns));
         $search_data['where'] = $where_clause;
         $search_data['date'] = $date_clause;
         $search_data['like'] = $like_clause;
 
-        // dd($search_data);
         $links = $this->links_repository->index($search_data);
 
         return $links;
